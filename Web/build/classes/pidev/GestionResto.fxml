@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="pidev.GestionRestoController">
+   <children>
+      <VBox layoutX="37.0" layoutY="81.0" prefHeight="218.0" prefWidth="86.0" spacing="15.0">
+         <children>
+            <Label text="ID" />
+            <Label text="NOM" />
+            <Label text="ADRESSE" />
+            <Label text="MENU" />
+            <Label text="NUM" />
+         </children>
+      </VBox>
+      <VBox layoutX="98.0" layoutY="81.0" prefHeight="218.0" prefWidth="178.0" spacing="10.0">
+         <children>
+            <TextField fx:id="idr" />
+            <TextField fx:id="nomr" />
+            <TextField fx:id="adresser" />
+            <TextField fx:id="menu" />
+            <TextField fx:id="numr" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvresto" layoutX="301.0" layoutY="81.0" onMousePressed="#Afficherresto" prefHeight="327.0" prefWidth="490.0">
+        <columns>
+          <TableColumn fx:id="colidr" prefWidth="36.79998779296875" text="ID" />
+          <TableColumn fx:id="colnomr" prefWidth="86.39996337890625" text="NOM" />
+            <TableColumn fx:id="coladresser" prefWidth="94.4000244140625" text="ADRESSE" />
+            <TableColumn fx:id="colmenu" prefWidth="92.79998779296875" text="MENU" />
+            <TableColumn fx:id="colnumr" minWidth="0.0" prefWidth="76.79998779296875" text="NUM" />
+            <TableColumn fx:id="colimg" prefWidth="101.5999755859375" text="IMAGE" />
+        </columns>
+      </TableView>
+      <Button layoutX="41.0" layoutY="287.0" mnemonicParsing="false" onAction="#Ajouterresto" prefHeight="26.0" prefWidth="74.0" text="Ajouter" />
+      <Button layoutX="121.0" layoutY="287.0" mnemonicParsing="false" onAction="#Modifierresto" prefHeight="26.0" prefWidth="74.0" text="Modifier" />
+      <Button layoutX="201.0" layoutY="287.0" mnemonicParsing="false" onAction="#Supprimerresto" prefHeight="26.0" prefWidth="74.0" text="Supprimer" />
+      <Button layoutX="734.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#Retour" text="Retour" />
+      <ImageView fx:id="importimage" fitHeight="123.0" fitWidth="249.0" layoutX="28.0" layoutY="333.0" onDragOver="#handle" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btbrowse" layoutX="173.0" layoutY="497.0" mnemonicParsing="false" onAction="#importimage" prefHeight="26.0" prefWidth="103.0" text="UPLOAD" />
+      <TextField fx:id="img" layoutX="28.0" layoutY="464.0" prefHeight="26.0" prefWidth="249.0" promptText="IMAGE" />
+      <TextField fx:id="rechr" layoutX="301.0" layoutY="38.0" prefHeight="26.0" prefWidth="390.0" promptText="RECHERCHE" />
+      <Button layoutX="714.0" layoutY="38.0" mnemonicParsing="false" onAction="#Rechercher" text="Recherche" />
+      <Button layoutX="28.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#SMS" text="SMS" />
+   </children>
+</AnchorPane>

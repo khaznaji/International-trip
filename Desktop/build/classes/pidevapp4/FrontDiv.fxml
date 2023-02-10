@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidevapp4.FrontDivController">
+   <children>
+      <TableView fx:id="tvdiv" layoutX="347.0" layoutY="263.0" onMousePressed="#Afficher" prefHeight="344.0" prefWidth="450.0">
+         <columns>
+            <TableColumn fx:id="colnom" prefWidth="92.800048828125" text="NOM" />
+            <TableColumn fx:id="coltype" prefWidth="92.800048828125" text="TYPE" />
+            <TableColumn fx:id="coladresse" prefWidth="154.39996337890625" text="ADRESSE" />
+            <TableColumn fx:id="colnum" prefWidth="108.0" text="NUM" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tvfav" layoutX="52.0" layoutY="435.0" onMouseReleased="#Afficherfav" prefHeight="170.0" prefWidth="152.0">
+         <columns>
+            <TableColumn fx:id="nomfav" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="numfav" prefWidth="75.0" text="NUM" />
+         </columns>
+      </TableView>
+      <Label layoutX="98.0" layoutY="413.0" text="FAVORIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="233.0" layoutY="435.0" onMouseClicked="#ajouterfav" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@heart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="233.0" layoutY="486.0" onMouseClicked="#supprimerfav" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@remove.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

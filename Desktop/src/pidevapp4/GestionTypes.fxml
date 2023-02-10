@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="pidevapp4.GestionTypesController">
+   <children>
+      <TextField fx:id="tfpays" layoutX="74.0" layoutY="319.0" />
+      <Button layoutX="187.0" layoutY="456.0" mnemonicParsing="false" onAction="#AjouterPays" text="Ajouter" />
+      <Button layoutX="337.0" layoutY="414.0" mnemonicParsing="false" onAction="#ModifierPays" text="Modifier" />
+      <Button layoutX="417.0" layoutY="414.0" mnemonicParsing="false" onAction="#SupprimerPays" text="Supprimer" />
+      <TableView fx:id="tabp" layoutX="337.0" layoutY="67.0" onMouseClicked="#AfficherPays" prefHeight="200.0" prefWidth="265.0">
+         <columns>
+            <TableColumn fx:id="tabid" prefWidth="75.0" text="C1" />
+            <TableColumn fx:id="tabpays" prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="tabimg" prefWidth="114.39998779296877" text="C2" />
+         </columns>
+      </TableView>
+      <TextField fx:id="tfid" layoutX="344.0" layoutY="24.0" />
+      <ImageView fx:id="imghotel" fitHeight="180.0" fitWidth="244.0" layoutX="60.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="upload" layoutX="250.0" layoutY="210.0" mnemonicParsing="false" onAction="#UploadImage" text="Button" />
+      <TextField fx:id="tfimg" layoutX="74.0" layoutY="280.0" />
+   </children>
+</AnchorPane>
